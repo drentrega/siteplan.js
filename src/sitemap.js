@@ -50,7 +50,7 @@ module.exports = class Sitemap {
   add(urls) {
     [].concat(urls)
       .slice(0, this.options.maxUrls - this.urlset.length)
-      .forEach(url => this.urlset.push(new Location({ ...url, domain: this.domain })));
+      .forEach(url => this.urlset.push(new Location({ ...url, domain: this.options.domain })));
 
     return this;
   }
